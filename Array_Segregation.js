@@ -1393,10 +1393,10 @@ var arr = [
 ]
 var result = arr.reduce((acc, input) => {
           if(input["parent-id"]==null)
-              acc.section.push(input);
+              acc.section.push(input["display-name"]);
               else
-              acc.subsection.push(input);
+              acc.subsection.push(input["display-name"]);
         return acc;
       }, {section:[],subsection:[]});
       
-      console.log(result); //output: {section: Array(62), subsection: Array(53)}
+      console.log(result); 
